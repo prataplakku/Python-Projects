@@ -6,8 +6,7 @@ sortedlist_1=[]
 mode_list=[]
 for i in input_list:
     list_num=list_num+[int(i)]
-    
-print(list_num)
+
 for i in range(l):
     l1=len(sortedlist_1)
     if i==0:
@@ -28,16 +27,23 @@ for i in sortedlist_1:
         if i==j:
             mode+=1
     mode_list+=[mode]
-print(sortedlist_1)
-print(mode_list)
+
 maxmode=0
 index=-1
 for i in mode_list:
     if i>maxmode:
         maxmode=i
+maxmode_list=[]
 for i in range(len(mode_list)):
     index=index+1
     if mode_list[i]==maxmode:
-        break
-print("Mode is "+str(sortedlist_1[index]))
+        maxmode_list+=[sortedlist_1[index]]
+ans=""
+for i in maxmode_list:
+    ans=ans+str(i)+" ,"
+print("Mode is "+ans[:-1])
+
+            
+        
+    
     
