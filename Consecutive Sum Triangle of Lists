@@ -1,0 +1,16 @@
+def newlist(a):
+    b=[]
+    l=len(a)
+    if l==1:
+        return None
+    for i in range(l-1):
+        b.append(a[i]+a[i+1])
+    print(b)
+    return newlist(b)
+        
+a=input().split(",")
+b=[]
+for i in a:
+    b.append(int(i))
+print(b)
+newlist(b)
